@@ -16,7 +16,7 @@ A RESTFUL API built with https://hapi.dev/ framework without using any database
 3. open the project on your editor
 4. rename `.env.example` to `.env`, then complete the configuration
 5. open terminal (in this example is PowerShell)
-6. position it in the project directory with this command `cd D:/node/soccer-api`
+6. position it in the project directory (example command `cd D:/node/soccer-api`)
 7. `npm install` to install all project dependencies
 8. `npm start` to run the project and wait a while (until you see `server start at...`)
 9. open postman
