@@ -1,0 +1,337 @@
+{
+	"info": {
+		"_postman_id": "84eabd13-82f2-44fd-ac59-35a3f238e4f6",
+		"name": "Soccer API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Team",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Manchester United F.C.\",\r\n    \"manager\": \"Ralf Rangnick\",\r\n    \"stadion\": \"Old Trafford\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/teams",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"teams"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create Team",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Manchester United F.C.\",\r\n    \"manager\": \"Ralf Rangnick\",\r\n    \"stadion\": \"Old Trafford\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}/teams",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"teams"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "content-type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "cache-control",
+							"value": "no-cache"
+						},
+						{
+							"key": "content-length",
+							"value": "134"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 20 Jan 2022 15:31:23 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"team\": {\n            \"name\": \"Manchester United F.C.\",\n            \"manager\": \"Ralf Rangnick\",\n            \"stadion\": \"Old Trafford\",\n            \"players\": []\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Add Player to the Team",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Cristinao Ronaldo\",\r\n    \"nationality\": \"Portugal\",\r\n    \"position\": \"FW\",\r\n    \"team\": \"Manchester United F.C.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/players",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"players"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add Player to the Team",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Cristinao Ronaldo\",\r\n    \"nationality\": \"Portugal\",\r\n    \"position\": \"FW\",\r\n    \"team\": \"Manchester United F.C.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}/players",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"players"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "content-type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "cache-control",
+							"value": "no-cache"
+						},
+						{
+							"key": "content-length",
+							"value": "108"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 20 Jan 2022 15:31:46 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"player\": {\n            \"name\": \"Cristinao Ronaldo\",\n            \"nationality\": \"Portugal\",\n            \"position\": \"FW\"\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Team",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}:{{port}}/teams?name=Manchester United F.C.",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"teams"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Manchester United F.C."
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Team",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}:{{port}}/teams?name=Manchester United F.C.",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"teams"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Manchester United F.C."
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "content-type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "cache-control",
+							"value": "no-cache"
+						},
+						{
+							"key": "content-length",
+							"value": "203"
+						},
+						{
+							"key": "accept-ranges",
+							"value": "bytes"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 20 Jan 2022 15:32:00 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"team\": {\n            \"name\": \"Manchester United F.C.\",\n            \"manager\": \"Ralf Rangnick\",\n            \"stadion\": \"Old Trafford\",\n            \"players\": [\n                {\n                    \"name\": \"Cristinao Ronaldo\",\n                    \"nationality\": \"Portugal\",\n                    \"position\": \"FW\"\n                }\n            ]\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Player",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}:{{port}}/players?team=Manchester United F.C.&name=Cristinao Ronaldo",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"players"
+					],
+					"query": [
+						{
+							"key": "team",
+							"value": "Manchester United F.C."
+						},
+						{
+							"key": "name",
+							"value": "Cristinao Ronaldo"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Player",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}:{{port}}/players?team=Manchester United F.C.&name=Cristinao Ronaldo",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"players"
+							],
+							"query": [
+								{
+									"key": "team",
+									"value": "Manchester United F.C."
+								},
+								{
+									"key": "name",
+									"value": "Cristinao Ronaldo"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "content-type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "cache-control",
+							"value": "no-cache"
+						},
+						{
+							"key": "content-length",
+							"value": "108"
+						},
+						{
+							"key": "accept-ranges",
+							"value": "bytes"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 20 Jan 2022 15:32:10 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"player\": {\n            \"name\": \"Cristinao Ronaldo\",\n            \"nationality\": \"Portugal\",\n            \"position\": \"FW\"\n        }\n    }\n}"
+				}
+			]
+		}
+	]
+}
