@@ -23,3 +23,4 @@ A RESTFUL API built with https://hapi.dev/ framework without using any database
 10. import postman collection `Soccer API.postman_collection.json` and environment `Soccer API.postman_environment.json`
 11. make sure you use Soccer API for postman environment
 12. open Soccer API collection and send request
+13. If you want to check unit test and code coverage, run `npm run test:watch` in terminal
